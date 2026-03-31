@@ -15,7 +15,13 @@
       "Bash(grep -h \"<title>\" *.html blog/*.html)",
       "Bash(ls -1 blog/*.html)",
       "Bash(grep -oh 'href=\"\"\"\"[^\"\"\"\"]*\\\\.html[^\"\"\"\"]*\"\"\"\"' *.html blog/*.html)",
-      "Bash(grep -v ':0$')"
+      "Bash(grep -v ':0$')",
+      "Bash(ls \"C:\\\\Users\\\\youssef.lechhebmhaou\\\\.claude\\\\projects\\\\c--Users-youssef-lechhebmhaou-OneDrive---Financiere-Acteon-Bureau-Website-Driss\\\\memory\"\" 2>/dev/null && cat \"C:Usersyoussef.lechhebmhaou.claudeprojectsc--Users-youssef-lechhebmhaou-OneDrive---Financiere-Acteon-Bureau-Website-DrissmemoryMEMORY.md\" 2>/dev/null || echo \"NO MEMORY YET \")",
+      "Read(//c/Users/youssef.lechhebmhaou/.claude/**)",
+      "Read(//c/Users/youssef.lechhebmhaou/.claude/plugins//**)",
+      "Bash(grep -l \"og:\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)",
+      "Bash(grep -l \"schema.org\\\\|ld+json\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)",
+      "Bash(grep -i \"nofollow\\\\|noindex\\\\|noarchive\\\\|nocache\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)"
     ]
   }
 }
