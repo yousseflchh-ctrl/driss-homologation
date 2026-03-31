@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos d'Homologation VP | Agréé ANTS n°228833 depuis 2016</title>
+  <meta name="description" content="Spécialiste agréé ANTS n°228833 depuis 2016 de l'homologation VASP et Dériv-VP. 2 400+ véhicules homologués, service 100% à distance depuis Martillac (Gironde).">
+  <link rel="canonical" href="https://homologation-vp.fr/a-propos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Homologation VP">
+  <meta property="og:title" content="À propos d'Homologation VP — Agréé ANTS n°228833 depuis 2016">
+  <meta property="og:description" content="Spécialiste de l'homologation VASP et Dériv-VP, agréé ANTS n°228833 depuis 2016. 2 400+ véhicules traités, service 100% à distance depuis Martillac (Gironde).">
+  <meta property="og:url" content="https://homologation-vp.fr/a-propos.html">
+  <meta property="og:image" content="https://homologation-vp.fr/img/og-homologation-vp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="À propos d'Homologation VP — Agréé ANTS n°228833 depuis 2016">
+  <meta name="twitter:description" content="Spécialiste de l'homologation VASP et Dériv-VP, agréé ANTS n°228833 depuis 2016. 2 400+ véhicules traités.">
+  <meta name="twitter:image" content="https://homologation-vp.fr/img/og-homologation-vp.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── À propos : page-specific styles ─────────────────── */
+
+    /* Hero amélioré */
+    .ap-hero {
+      padding-block: 5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .ap-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% -10%, rgba(249,115,22,0.18) 0%, transparent 70%),
+        linear-gradient(135deg, #0F2540 0%, #1A3C5E 60%, #1e4976 100%);
+    }
+    .ap-hero .container { position: relative; }
+    .ap-hero .breadcrumb-list { justify-content: center; }
+    .ap-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(249,115,22,0.18);
+      border: 1px solid rgba(249,115,22,0.35);
+      color: #FDBA74;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+    .ap-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      margin-bottom: 1rem;
+    }
+    .ap-hero .page-hero-sub {
+      max-width: 56ch;
+      margin-inline: auto;
+      font-size: 1.1rem;
+    }
+    .ap-hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .ap-chip {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.20);
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+    }
+    .ap-chip strong {
+      color: #F97316;
+      font-weight: 700;
+    }
+
+    /* Timeline histoire */
+    .ap-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .ap-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--orange), var(--navy));
+      border-radius: 2px;
+    }
+    .ap-timeline-item {
+      position: relative;
+      padding: 0 0 2rem 1.5rem;
+    }
+    .ap-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.625rem;
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px rgba(249,115,22,0.2);
+    }
+    .ap-timeline-year {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.3rem;
+    }
+    .ap-timeline-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+    .ap-timeline-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Stats section améliorée */
+    .ap-stats-band {
+      background: linear-gradient(135deg, #0F2540 0%, #1A3C5E 100%);
+      padding-block: 4rem;
+      text-align: center;
+    }
+    .ap-stats-band .section-label {
+      background: rgba(249,115,22,0.18);
+      color: #FDBA74;
+    }
+    .ap-stats-band h2 {
+      color: white;
+      margin-bottom: 0;
+    }
+    .ap-stats-band .section-header {
+      margin-bottom: 3rem;
+    }
+    .ap-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .ap-stat {
+      padding: 2rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .ap-stat:last-child { border-right: none; }
+    .ap-stat-num {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+      margin: 0 0 0.5rem;
+    }
+    .ap-stat-num span {
+      color: var(--orange);
+    }
+    .ap-stat-label {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Accréditations améliorées */
+    .ap-accred-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .ap-accred-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      transition: box-shadow var(--ease), transform var(--ease);
+    }
+    .ap-accred-card:hover {
+      box-shadow: var(--sh-md);
+      transform: translateY(-2px);
+    }
+    .ap-accred-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--blue-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      color: var(--navy);
+    }
+    .ap-accred-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      color: var(--navy);
+    }
+    .ap-accred-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Engagements améliorés */
+    .ap-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .ap-trust-card {
+      padding: 1.75rem;
+      border-radius: var(--radius);
+      background: white;
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: box-shadow var(--ease);
+    }
+    .ap-trust-card:hover { box-shadow: var(--sh-md); }
+    .ap-trust-icon-wrap {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--blue-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+    }
+    .ap-trust-card h3 {
+      font-size: 0.97rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--navy);
+    }
+    .ap-trust-card p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .ap-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .ap-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .ap-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
+      .ap-stat:last-child { border-bottom: none; }
+      .ap-accred-grid { grid-template-columns: 1fr; }
+      .ap-trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .ap-hero-chips { gap: 0.5rem; }
+      .ap-chip { font-size: 0.82rem; padding: 0.4rem 0.85rem; }
+      .ap-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .ap-trust-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://homologation-vp.fr/" },
+          { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://homologation-vp.fr/a-propos.html" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "Homologation VP",
+        "url": "https://homologation-vp.fr",
+        "logo": "https://homologation-vp.fr/img/og-homologation-vp.jpg",
+        "foundingDate": "2016",
+        "telephone": "+33659469728",
+        "email": "cf.baraka.solutions@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4D Chemin de la Grange",
+          "addressLocality": "Martillac",
+          "postalCode": "33650",
+          "addressCountry": "FR"
+        },
+        "description": "Spécialiste de l'homologation VASP et Dériv-VP, agréé ANTS n°228833 depuis 2016. Service 100% à distance depuis Martillac (Gironde).",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "312",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Agrément ANTS n°228833",
+            "credentialCategory": "Agrément opérateur SIV"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header id="main-nav" class="nav" role="banner">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Homologation VP — Accueil">
+      <span class="nav-logo-text">Homologation<span class="nav-logo-accent">VP</span></span>
+      <span class="nav-logo-badge">Agréé ANTS</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <div class="nav-item nav-item-dropdown">
+        <button class="nav-link nav-link-btn" aria-haspopup="true">Nos services <span class="nav-chevron">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="homologation-vasp.html" class="nav-dropdown-item" role="menuitem">Homologation VASP</a>
+          <a href="homologation-deriv-vp.html" class="nav-dropdown-item" role="menuitem">Dériv-VP</a>
+          <a href="carte-grise.html" class="nav-dropdown-item" role="menuitem">Carte Grise</a>
+        </div>
+      </div>
+      <a href="tarifs.html" class="nav-link">Tarifs</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <a href="a-propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm">Devis gratuit</a>
+      <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu mobile" aria-modal="true">
+  <div class="mobile-menu-inner">
+    <button id="mobile-close" class="mobile-close" aria-label="Fermer le menu">&times;</button>
+    <nav>
+      <button class="mobile-nav-parent mobile-nav-link">Nos services <span>▾</span></button>
+      <div class="mobile-nav-sub">
+        <a href="homologation-vasp.html" class="mobile-nav-link mobile-nav-sub-link">Homologation VASP</a>
+        <a href="homologation-deriv-vp.html" class="mobile-nav-link mobile-nav-sub-link">Dériv-VP</a>
+        <a href="carte-grise.html" class="mobile-nav-link mobile-nav-sub-link">Carte Grise</a>
+      </div>
+      <a href="tarifs.html" class="mobile-nav-link">Tarifs</a>
+      <a href="blog/index.html" class="mobile-nav-link">Blog</a>
+      <a href="a-propos.html" class="mobile-nav-link">À propos</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;display:block;text-align:center;">Devis gratuit</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- Hero -->
+<section class="page-hero ap-hero" aria-labelledby="page-heading">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Accueil</a></li>
+        <li aria-current="page">À propos</li>
+      </ol>
+    </nav>
+    <div class="ap-hero-content fade-in-up">
+      <div class="ap-hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Agréé ANTS n°228833 · Certifié UTAC · Depuis 2016
+      </div>
+      <h1 id="page-heading">Qui sommes-nous&nbsp;?</h1>
+      <p class="page-hero-sub">Depuis 2016, Homologation VP accompagne les particuliers et les professionnels dans leurs démarches d'homologation VASP, Dériv-VP et carte grise. Un seul interlocuteur, un délai maîtrisé, une procédure 100&nbsp;% à distance.</p>
+      <div class="ap-hero-chips">
+        <div class="ap-chip"><strong>2&nbsp;400+</strong> véhicules traités</div>
+        <div class="ap-chip"><strong>4,7/5</strong> avis clients</div>
+        <div class="ap-chip"><strong>48h</strong> de traitement</div>
+        <div class="ap-chip"><strong>100&nbsp;%</strong> à distance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notre histoire — timeline -->
+<section class="section" aria-labelledby="histoire-heading">
+  <div class="container">
+    <div class="content-split fade-in-up">
+      <div class="content-split-text">
+        <span class="section-label">Notre histoire</span>
+        <h2 id="histoire-heading">Fondés en 2016, agréés ANTS dès le départ</h2>
+        <p style="margin-bottom:2rem;">Homologation VP est né d'un constat simple : les démarches d'homologation de véhicules transformés sont complexes, chronophages et souvent mal balisées. Obtenir l'agrément ANTS n°228833 en 2016 a été notre premier engagement concret envers nos clients.</p>
+        <div class="ap-timeline">
+          <div class="ap-timeline-item">
+            <p class="ap-timeline-year">2016</p>
+            <p class="ap-timeline-title">Création et agrément ANTS n°228833</p>
+            <p class="ap-timeline-text">Obtention de l'agrément opérateur SIV délivré par l'ANTS, premier cap fondateur de l'entreprise.</p>
+          </div>
+          <div class="ap-timeline-item">
+            <p class="ap-timeline-year">2017</p>
+            <p class="ap-timeline-title">Dématérialisation totale des procédures</p>
+            <p class="ap-timeline-text">Mise en place d'un service 100&nbsp;% à distance : dépôt de dossiers par WhatsApp ou espace client sécurisé, partout en France.</p>
+          </div>
+          <div class="ap-timeline-item">
+            <p class="ap-timeline-year">2020</p>
+            <p class="ap-timeline-title">1 000 véhicules homologués</p>
+            <p class="ap-timeline-text">Cap symbolique franchi après 4 ans d'activité, consolidant notre expertise sur les dossiers VASP et Dériv-VP.</p>
+          </div>
+          <div class="ap-timeline-item">
+            <p class="ap-timeline-year">Aujourd'hui</p>
+            <p class="ap-timeline-title">2 400+ véhicules traités · 4,7/5 de satisfaction</p>
+            <p class="ap-timeline-text">Notre équipe accompagne aménageurs, transporteurs, administrations et particuliers dans toute la France métropolitaine.</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-split-aside">
+        <div class="aside-highlight">
+          <div class="aside-highlight-icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p class="aside-highlight-title">Agrément ANTS n°228833</p>
+          <p class="aside-highlight-sub">Délivré par l'Agence Nationale des Titres Sécurisés. Valide pour l'instruction des dossiers SIV et l'édition des certificats d'immatriculation.</p>
+        </div>
+        <div class="aside-highlight" style="margin-top:1rem;background:var(--blue-bg);border-color:var(--navy);">
+          <div class="aside-highlight-icon" style="background:var(--navy);color:white;" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <p class="aside-highlight-title" style="color:var(--navy);">Certification UTAC</p>
+          <p class="aside-highlight-sub">Nos techniciens travaillent en lien direct avec l'UTAC pour la validation des dossiers de réception à titre isolé.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chiffres clés — bande sombre -->
+<section class="ap-stats-band" aria-labelledby="chiffres-heading">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <span class="section-label">En chiffres</span>
+      <h2 id="chiffres-heading">Ce que nos résultats disent de nous</h2>
+    </div>
+    <div class="ap-stats-grid fade-in-up">
+      <div class="ap-stat">
+        <p class="ap-stat-num">2&nbsp;400<span>+</span></p>
+        <p class="ap-stat-label">Véhicules homologués depuis 2016</p>
+      </div>
+      <div class="ap-stat">
+        <p class="ap-stat-num">4,7<span>/5</span></p>
+        <p class="ap-stat-label">Note moyenne · 312 avis clients</p>
+      </div>
+      <div class="ap-stat">
+        <p class="ap-stat-num">48<span>h</span></p>
+        <p class="ap-stat-label">Délai de confirmation de recevabilité</p>
+      </div>
+      <div class="ap-stat">
+        <p class="ap-stat-num">100<span>%</span></p>
+        <p class="ap-stat-label">À distance, partout en France</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notre expertise -->
+<section class="section" aria-labelledby="expertise-heading">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <span class="section-label">Notre expertise</span>
+      <h2 id="expertise-heading">Des techniciens formés, des procédures maîtrisées</h2>
+      <p class="section-sub">Chaque dossier est traité par un technicien certifié UTAC, familier des exigences réglementaires propres à chaque type de transformation.</p>
+    </div>
+
+    <div class="features-grid fade-in-up">
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3>Homologation VASP</h3>
+        <p>Nous constituons et instruisons les dossiers de réception à titre isolé (RTI) pour les véhicules transformés en ambulance, camping-car, bétaillère, véhicule blindé et autres affectations spéciales.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Dériv-VP</h3>
+        <p>La dérivation VP concerne les véhicules issus d'une base VP dont la carrosserie a été modifiée. Nous gérons la procédure de réception par type nationale ou la RTI selon le volume concerné.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Carte grise</h3>
+        <p>En tant qu'opérateur agréé SIV, nous effectuons les démarches d'immatriculation directement dans le Système d'Immatriculation des Véhicules, sans déplacement en préfecture.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Délais maîtrisés</h3>
+        <p>Confirmation de recevabilité sous 48 heures. Pour les dossiers complets, la grande majorité des homologations est finalisée en moins de 15 jours ouvrés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Accréditations -->
+<section class="section section-gray" aria-labelledby="accreditations-heading">
+  <div class="container">
+    <div class="section-header fade-in-up" style="text-align:center;">
+      <span class="section-label">Accréditations</span>
+      <h2 id="accreditations-heading">Des agréments qui engagent notre responsabilité</h2>
+      <p class="section-sub">Nos habilitations sont délivrées par des organismes officiels et font l'objet de contrôles réguliers.</p>
+    </div>
+    <div class="ap-accred-grid fade-in-up">
+      <div class="ap-accred-card">
+        <div class="ap-accred-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Agrément ANTS n°228833</h3>
+        <p>Délivré par l'Agence Nationale des Titres Sécurisés, cet agrément nous autorise à instruire les dossiers d'immatriculation dans le SIV. Soumis à audit et renouvelable selon les critères fixés par arrêté ministériel.</p>
+      </div>
+      <div class="ap-accred-card">
+        <div class="ap-accred-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <h3>Certification UTAC</h3>
+        <p>L'UTAC est l'organisme technique de référence pour la réception des véhicules en France. Nos techniciens travaillent en lien direct avec ses services pour la validation des dossiers RTI.</p>
+      </div>
+      <div class="ap-accred-card">
+        <div class="ap-accred-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3>Accès professionnel SIV</h3>
+        <p>Notre statut d'opérateur agréé SIV nous permet d'effectuer les démarches d'immatriculation directement dans le système national, conformément au décret n°2009-302 du 18 mars 2009.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi nous faire confiance -->
+<section class="section" aria-labelledby="confiance-heading">
+  <div class="container">
+    <div class="section-header fade-in-up" style="text-align:center;">
+      <span class="section-label">Nos engagements</span>
+      <h2 id="confiance-heading">Pourquoi nous faire confiance</h2>
+    </div>
+    <div class="ap-trust-grid fade-in-up">
+      <div class="ap-trust-card">
+        <div class="ap-trust-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Transparence totale</h3>
+          <p>Devis écrit avant tout engagement, liste précise des documents à fournir. Aucun frais caché.</p>
+        </div>
+      </div>
+      <div class="ap-trust-card">
+        <div class="ap-trust-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <h3>100&nbsp;% à distance</h3>
+          <p>Transmettez vos pièces par email ou WhatsApp. Aucun déplacement en préfecture ou centre de contrôle.</p>
+        </div>
+      </div>
+      <div class="ap-trust-card">
+        <div class="ap-trust-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h3>Qualité du dossier garantie</h3>
+          <p>Chaque pièce est vérifiée avant dépôt. Les documents insuffisants sont signalés immédiatement.</p>
+        </div>
+      </div>
+      <div class="ap-trust-card">
+        <div class="ap-trust-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <h3>Un interlocuteur dédié</h3>
+          <p>La même personne suit votre dossier du début à la fin, joignable par téléphone ou WhatsApp.</p>
+        </div>
+      </div>
+      <div class="ap-trust-card">
+        <div class="ap-trust-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div>
+          <h3>Couverture nationale</h3>
+          <p>Notre service s'adresse à tous les propriétaires en France métropolitaine, sans contrainte géographique.</p>
+        </div>
+      </div>
+      <div class="ap-trust-card">
+        <div class="ap-trust-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3>Conformité réglementaire</h3>
+          <p>Respect du Code de la route, des directives 2007/46/CE et 2018/858/UE, et des instructions DREAL.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="section section-cta" aria-labelledby="cta-heading">
+  <div class="container container-narrow text-center">
+    <div class="cta-block fade-in-up">
+      <h2 id="cta-heading">Un projet d'homologation&nbsp;? Parlons-en.</h2>
+      <p>Obtenez une réponse sur la faisabilité de votre dossier sous 48 heures. Le devis initial est gratuit et sans engagement.</p>
+      <div class="cta-actions">
+        <a href="https://wa.me/33659469728?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20homologuer%20mon%20v%C3%A9hicule." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener" aria-label="Nous contacter via WhatsApp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-lg">Formulaire de contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulaire de contact intégré -->
+<section class="section section-gray" aria-labelledby="form-heading">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-form-wrapper fade-in-up">
+        <h2 id="form-heading">Envoyez-nous un message</h2>
+        <p>Décrivez votre projet et nous vous répondons sous 2 heures en jours ouvrés.</p>
+
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xnjododa" method="POST" aria-label="Formulaire de contact">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="prenom">Prénom <span aria-hidden="true">*</span></label>
+              <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Jean" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nom">Nom <span aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" class="form-input" placeholder="Dupont" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="jean.dupont@email.fr" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="06 XX XX XX XX" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="objet">Sujet de votre demande <span aria-hidden="true">*</span></label>
+            <select id="objet" name="objet" class="form-select" required>
+              <option value="" disabled selected>Choisissez un sujet</option>
+              <option value="vasp">Homologation VASP</option>
+              <option value="deriv-vp">Homologation Dériv-VP</option>
+              <option value="carte-grise">Carte grise</option>
+              <option value="pro-siv">Accès Pro SIV</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Votre message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez votre véhicule (marque, modèle, année, nombre de places actuel) et votre besoin." required></textarea>
+          </div>
+          <div class="form-group form-group-checkbox">
+            <label class="form-checkbox-label">
+              <input type="checkbox" name="rgpd" required class="form-checkbox">
+              <span>J'accepte que mes données soient traitées par Homologation VP pour répondre à ma demande. <a href="politique-confidentialite.html" target="_blank">Politique de confidentialité</a> <span aria-hidden="true">*</span></span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-accent btn-lg btn-full">Envoyer mon message</button>
+        </form>
+      </div>
+
+      <aside class="contact-info-sidebar fade-in-up">
+        <div class="sidebar-card">
+          <h3>Informations pratiques</h3>
+          <address class="contact-sidebar-address">
+            <div class="contact-sidebar-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:+33659469728">+33&nbsp;6&nbsp;59&nbsp;46&nbsp;97&nbsp;28</a>
+            </div>
+            <div class="contact-sidebar-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:cf.baraka.solutions@gmail.com">cf.baraka.solutions@gmail.com</a>
+            </div>
+            <div class="contact-sidebar-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4D Chemin de la Grange<br>33650 Martillac (Gironde)</span>
+            </div>
+            <div class="contact-sidebar-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <div>Lundi au vendredi : 8h à 19h</div>
+                <div>Samedi : 9h à 17h</div>
+                <div>Dimanche : Fermé</div>
+              </div>
+            </div>
+          </address>
+        </div>
+        <div class="sidebar-card sidebar-trust">
+          <h3>Nos accréditations</h3>
+          <ul class="sidebar-checklist">
+            <li>Agréé ANTS n°228833</li>
+            <li>Certifié UTAC</li>
+            <li>Opérateur SIV agréé</li>
+            <li>2 400+ véhicules traités</li>
+            <li>4,7/5 sur 312 avis</li>
+            <li>Depuis 2016</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="index.html" class="footer-logo"><span class="footer-logo-text">Homologation<span>VP</span></span></a>
+      <p class="footer-tagline">Spécialiste de l'homologation VASP et Dériv-VP, agréé ANTS n°228833 depuis 2016.</p>
+      <address class="footer-address">4D Chemin de la Grange<br>33650 Martillac (Gironde)<br><a href="tel:+33659469728">+33 6 59 46 97 28</a></address>
+    </div>
+    <div class="footer-col"><h3 class="footer-col-title">Nos services</h3><ul class="footer-links"><li><a href="homologation-vasp.html">Homologation VASP</a></li><li><a href="homologation-deriv-vp.html">Dériv-VP</a></li><li><a href="carte-grise.html">Carte Grise</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
+    <div class="footer-col"><h3 class="footer-col-title">Informations</h3><ul class="footer-links"><li><a href="a-propos.html">À propos</a></li><li><a href="blog/index.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="politique-confidentialite.html">Confidentialité</a></li></ul></div>
+    <div class="footer-col"><h3 class="footer-col-title">Contact</h3><ul class="footer-contact-list"><li><a href="tel:+33659469728">+33 6 59 46 97 28</a></li><li><a href="mailto:cf.baraka.solutions@gmail.com">cf.baraka.solutions@gmail.com</a></li><li>Lun. au Ven. 8h à 19h · Sam. 9h à 17h</li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2024 Homologation VP · Agréé ANTS n°228833</p><nav aria-label="Liens légaux"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></nav></div></div>
+</footer>
+
+<a id="whatsapp-fab" href="https://wa.me/33659469728?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20homologuer%20mon%20v%C3%A9hicule." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="fab-tooltip">Nous écrire</span>
+</a>
+<button id="scroll-top" class="scroll-top-btn" aria-label="Retour en haut"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+<script src="js/main.js" defer></script>
+</body>
+</html>

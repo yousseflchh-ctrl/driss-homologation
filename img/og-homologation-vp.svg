@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a3c5e"/>
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2540;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a3c5e;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Orange accent bar top -->
+  <rect width="1200" height="6" fill="#f97316"/>
+  <!-- Logo badge -->
+  <rect x="80" y="80" width="180" height="60" rx="8" fill="#f97316"/>
+  <text x="170" y="120" font-family="Arial,sans-serif" font-size="28" font-weight="800" text-anchor="middle" fill="white">Agréé ANTS</text>
+  <!-- Main title -->
+  <text x="80" y="260" font-family="Arial,sans-serif" font-size="72" font-weight="800" fill="white">Homologation</text>
+  <text x="80" y="350" font-family="Arial,sans-serif" font-size="72" font-weight="800" fill="#f97316">VASP &amp; Dériv-VP</text>
+  <!-- Subtitle -->
+  <text x="80" y="430" font-family="Arial,sans-serif" font-size="34" fill="rgba(255,255,255,0.75)">Agréé ANTS n°228833 · 100% à distance · 48h</text>
+  <!-- Stats bar -->
+  <rect x="80" y="500" width="1040" height="1" fill="rgba(255,255,255,0.15)"/>
+  <text x="80" y="555" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.60)">homologation-vp.fr</text>
+  <text x="1120" y="555" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="end" fill="#f97316">2 400+ véhicules traités</text>
+</svg>

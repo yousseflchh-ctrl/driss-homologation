@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:homologation-vp.fr)",
+      "Bash(for file:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss/**)",
+      "Bash(done)",
+      "Bash(do python3:*)",
+      "Bash(grep -r -n '&#x[1-9a-fA-F]' *.html)",
+      "Bash(grep -E '&#x1[fF]|&#x[2-9][0-9a-fA-F]{2,3}')",
+      "Bash(then echo:*)",
+      "Bash(else echo:*)",
+      "Bash(fi)",
+      "Bash(grep -h \"<title>\" *.html blog/*.html)",
+      "Bash(ls -1 blog/*.html)",
+      "Bash(grep -oh 'href=\"\"\"\"[^\"\"\"\"]*\\\\.html[^\"\"\"\"]*\"\"\"\"' *.html blog/*.html)",
+      "Bash(grep -v ':0$')"
+    ]
+  }
+}
