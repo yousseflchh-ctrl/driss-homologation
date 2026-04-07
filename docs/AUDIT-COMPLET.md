@@ -1,6 +1,6 @@
-# AUDIT SEO COMPLET — Homologation VP
-**Site :** homologation-vp.fr
-**Dernière mise à jour :** 31 mars 2026 (session 4 — audit complet)
+# AUDIT COMPLET — SEO · GEO · UX/UI · CRO · Performance · Accessibilité
+## Homologation VP — homologation-vp.fr
+**Dernière mise à jour :** 2 avril 2026
 **Score global : 8.5 / 10**
 
 ---
@@ -451,4 +451,229 @@ Le formulaire est branché sur Formspree (`action="https://formspree.io/f/xnjodo
 
 ---
 
-*Audit réalisé le 31 mars 2026 — Basé sur l'analyse complète des 17 pages HTML + robots.txt + sitemap.xml + .htaccess + styles.css + main.js*
+*Audit initial : 31 mars 2026 — Mis à jour : 2 avril 2026*
+
+---
+
+## PARTIE 5 — URLS & STRUCTURE (ajout 2 avril 2026)
+
+### Problème critique identifié — URLs avec /pages/ et .html
+
+Suite à la restructuration des fichiers (déplacement vers `pages/`), trois incohérences sont apparues :
+
+| Problème | Impact | Statut |
+|---|---|---|
+| URLs publiques contiennent `/pages/` | ❌ Mauvais signal SEO, URL non professionnelle | 🔴 À corriger |
+| Extension `.html` visible dans les URLs | ❌ Daté, moindre qualité perçue | 🔴 À corriger |
+| Canonicals des pages pointent vers anciennes URLs | ❌ Google indexe des adresses inexistantes | 🔴 À corriger |
+| Sitemap pages normales non mis à jour | ❌ Incohérence sitemap ↔ fichiers réels | 🔴 À corriger |
+
+### URLs cibles (ce que doit voir Google et le visiteur)
+
+| Page | URL correcte | Fichier physique |
+|---|---|---|
+| Accueil | `homologation-vp.fr/` | `index.html` |
+| Contact | `homologation-vp.fr/contact` | `pages/contact.html` |
+| Tarifs | `homologation-vp.fr/tarifs` | `pages/tarifs.html` |
+| Homologation VASP | `homologation-vp.fr/homologation-vasp` | `pages/homologation-vasp.html` |
+| Dériv-VP | `homologation-vp.fr/homologation-deriv-vp` | `pages/homologation-deriv-vp.html` |
+| Carte grise | `homologation-vp.fr/carte-grise` | `pages/carte-grise.html` |
+| À propos | `homologation-vp.fr/a-propos` | `pages/a-propos.html` |
+| Blog index | `homologation-vp.fr/blog` | `pages/blog/index.html` |
+| Article blog | `homologation-vp.fr/blog/[slug]` | `pages/blog/[slug].html` |
+
+### Solution .htaccess à ajouter
+
+```apache
+# Supprimer .html des URLs publiques (301 permanent)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Servir pages/ depuis les URLs propres à la racine
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/%{REQUEST_URI}.html -f [NC]
+RewriteRule ^(.+)$ /pages/$1.html [L]
+
+# Servir pages/blog/ depuis /blog/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/blog/%1.html -f [NC]
+RewriteRule ^blog/(.+)$ /pages/blog/$1.html [L]
+
+# Supprimer le slash final
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+```
+
+---
+
+## PARTIE 6 — CORE WEB VITALS (ajout 2 avril 2026)
+
+Facteurs de ranking Google officiels depuis 2021. À vérifier après mise en ligne sur [PageSpeed Insights](https://pagespeed.web.dev/).
+
+| Métrique | Signification | Cible | Statut actuel |
+|---|---|---|---|
+| **LCP** — Largest Contentful Paint | Temps de chargement du contenu principal | < 2.5s | ⚠️ Non mesuré (pas en ligne) |
+| **CLS** — Cumulative Layout Shift | Stabilité visuelle (pas de saut de mise en page) | < 0.1 | ⚠️ Non mesuré |
+| **INP** — Interaction to Next Paint | Réactivité aux clics et interactions | < 200ms | ⚠️ Non mesuré |
+
+### Points d'amélioration LCP identifiés dans le code
+- `loading="lazy"` absent sur les images ❌ → ralentit le LCP si image hero non priorisée
+- Pas de `rel="preload"` sur la police principale → risque de texte invisible au chargement
+- Image OG absente en JPG → pas d'image hero réelle → LCP basé sur du texte uniquement
+
+### Points d'amélioration CLS identifiés
+- Fonts Google chargées en async → risque de layout shift au chargement (déjà atténué par `display=swap`)
+- Pas de dimensions explicites sur les SVG inline → risque mineur
+
+---
+
+## PARTIE 7 — E-E-A-T (ajout 2 avril 2026)
+
+**Experience, Expertise, Authoritativeness, Trustworthiness** — le critère de qualité de contenu n°1 pour Google, particulièrement critique sur les sites à forte dimension réglementaire/juridique/financière (ce site en fait partie : immatriculation, agrément ANTS, réglementation automobile).
+
+| Signal E-E-A-T | Statut | Action |
+|---|---|---|
+| Agrément ANTS n°228833 mentionné | ✅ Sur toutes les pages | — |
+| Année de fondation (2016) | ✅ Présente | — |
+| Nombre de véhicules traités (2400+) | ✅ Présent | — |
+| Avis clients avec note (4.7/5) | ✅ En JSON-LD | ⚠️ Ajouter avis visibles en HTML (pas seulement JSON-LD) |
+| Photo de l'équipe ou du fondateur | ❌ Absente | 🟠 Ajouter sur a-propos.html |
+| Biographie de l'expert signataire | ❌ Absente | 🟠 Ajouter sur a-propos.html + articles blog |
+| Références réglementaires citées | ✅ Dans certains articles | ⚠️ Systématiser sur les pages service |
+| Mentions presse ou partenaires | ❌ Absentes | 🟡 Ajouter si disponible |
+| Adresse physique vérifiable | ✅ Présente | — |
+
+---
+
+## PARTIE 8 — INTENTION DE RECHERCHE (ajout 2 avril 2026)
+
+Chaque page doit correspondre à une intention de recherche précise. Mélanger les intentions sur une même page dilue la pertinence SEO.
+
+| Page | Intention cible | Correspondance actuelle |
+|---|---|---|
+| index.html | Transactionnelle — "homologation VASP" avec intention d'achat | ✅ Quiz éligibilité + CTAs clairs |
+| homologation-vasp.html | Transactionnelle + informationnelle | ✅ Service + FAQ + HowTo |
+| homologation-deriv-vp.html | Transactionnelle + informationnelle | ✅ Correct |
+| blog/guide-homologation-vasp.html | Informationnelle pure | ✅ Article complet |
+| blog/cout-homologation-vasp.html | Commerciale (comparaison prix) | ✅ Tarifs détaillés |
+| tarifs.html | Commerciale | ✅ Mais manque Offer JSON-LD |
+| contact.html | Navigationnelle + transactionnelle | ✅ Multi-canaux |
+
+---
+
+## PARTIE 9 — FEATURED SNIPPETS & POSITION 0 (ajout 2 avril 2026)
+
+Les Featured Snippets (encadrés en haut des résultats Google) peuvent être atteints sans être en 1ère position. Ils sont idéaux pour ce type de site (questions fréquentes sur la réglementation).
+
+### Optimisations pour obtenir des Featured Snippets
+- ✅ FAQ structurée en format question/réponse → compatible extraction Google
+- ✅ JSON-LD FAQPage sur homepage et pages service
+- ⚠️ Les réponses FAQ doivent être en 40-60 mots max pour les snippets courts
+- ❌ Pas de tableau comparatif VASP vs Dériv-VP en HTML pur (le JSON-LD seul ne suffit pas)
+- ❌ Pas de schema `HowTo` sur les articles de blog (seulement sur homologation-vasp.html)
+
+### Mots-clés à fort potentiel de snippet
+| Question | Page cible | Type de snippet |
+|---|---|---|
+| "Qu'est-ce que l'homologation VASP ?" | index.html + guide blog | Paragraphe |
+| "Combien coûte une homologation VASP ?" | cout-homologation-vasp.html | Paragraphe/liste |
+| "Documents nécessaires pour homologation VASP" | documents-homologation.html | Liste |
+| "Différence VASP Dériv-VP" | difference-vasp-deriv-vp.html | Tableau |
+
+---
+
+## PARTIE 10 — MAILLAGE INTERNE (ajout 2 avril 2026)
+
+Le maillage interne distribue l'autorité SEO entre les pages et aide Google à comprendre la hiérarchie du site.
+
+### Règles de maillage interne
+- Chaque page doit être accessible en maximum 3 clics depuis l'accueil
+- Chaque page doit recevoir au moins 2 liens internes provenant d'autres pages
+- Les ancres de liens internes doivent être descriptives et contenir des mots-clés
+- Les pages les plus importantes (services) doivent recevoir le plus de liens internes
+
+### Ancres incorrectes à corriger
+```
+❌ "cliquez ici", "en savoir plus", "voir la page"
+✅ "homologation VASP à distance", "tarifs homologation Dériv-VP", "guide complet VASP"
+```
+
+### Pages potentiellement orphelines à vérifier
+- `mentions-legales.html` — liée uniquement depuis le footer ⚠️
+- `politique-confidentialite.html` — liée uniquement depuis le footer et le formulaire ⚠️
+- `404.html` — normale (non liée intentionnellement) ✅
+
+---
+
+## PARTIE 11 — SEO LOCAL (ajout 2 avril 2026)
+
+Le site traite des clients partout en France mais est basé à Martillac (Gironde). Le SEO local renforce la crédibilité.
+
+| Action | Priorité | Statut |
+|---|---|---|
+| Google Business Profile — créer/revendiquer la fiche | 🔴 HAUTE | ❌ À faire |
+| Cohérence NAP (Nom, Adresse, Téléphone) sur toutes les pages | ✅ | Cohérent |
+| Schéma LocalBusiness avec GeoCoordinates | ✅ | Présent sur contact.html |
+| Citations dans annuaires sectoriels (L'Argus, La Centrale) | 🟠 MOYENNE | ❌ À faire |
+| Avis Google visibles (lien direct vers dépôt d'avis) | 🔴 HAUTE | ❌ À ajouter |
+| Photos du bureau/équipe sur Google Business | 🟠 MOYENNE | ❌ À faire |
+
+---
+
+## PARTIE 12 — OFF-PAGE SEO / BACKLINKS (ajout 2 avril 2026)
+
+50% du SEO est hors de la page. Les backlinks (liens entrants depuis d'autres sites) restent le signal de confiance n°1 pour Google.
+
+### Stratégie de netlinking prioritaire
+| Source | Méthode | Priorité |
+|---|---|---|
+| Annuaires automobiles (L'Argus, La Centrale, Caradisiac) | Inscription profil | 🔴 HAUTE |
+| Fédérations professionnelles (UTAC, FFC) | Demande partenariat | 🟠 MOYENNE |
+| Articles invités sur blogs auto/entrepreneurs | Rédiger un article avec lien | 🟠 MOYENNE |
+| Presse locale Bordeaux/Gironde | Communiqué de presse | 🟡 LONG TERME |
+| Forums spécialisés (utilitaires, artisans) | Présence experte | 🟡 LONG TERME |
+
+### À surveiller
+- Profil de backlinks actuel : non mesuré (utiliser Ahrefs, Semrush ou Ubersuggest)
+- Ancres des backlinks : diversifiées (marque + mots-clés + URL brute)
+- Pas de backlinks toxiques (fermes de liens, sites spam)
+
+---
+
+## PARTIE 13 — PLAN D'ACTION COMPLET MIS À JOUR (2 avril 2026)
+
+### 🔴 AVANT la mise en ligne
+| # | Tâche | Temps estimé |
+|---|---|---|
+| 1 | Créer `img/og-homologation-vp.jpg` (1200×630px) | 15 min |
+| 2 | Créer `favicon.ico` | 5 min |
+| 3 | Créer `img/apple-touch-icon.png` (180×180px) | 5 min |
+| 4 | Configurer .htaccess : URLs propres sans .html + réécriture pages/ | 15 min |
+| 5 | Mettre à jour les canonicals (supprimer .html) | 10 min |
+| 6 | Mettre à jour le sitemap (URLs propres sans .html) | 10 min |
+| 7 | Ajouter redirection www → non-www dans .htaccess | 5 min |
+
+### 🟠 Semaine 1 après mise en ligne
+| # | Tâche |
+|---|---|
+| 8 | Connecter Google Analytics 4 |
+| 9 | Soumettre sitemap à Google Search Console |
+| 10 | Créer/optimiser fiche Google Business Profile |
+| 11 | Allonger les 4 meta descriptions trop courtes |
+| 12 | Ajouter JSON-LD Offer/PriceSpecification sur tarifs |
+| 13 | Ajouter `loading="lazy"` sur toutes les images |
+| 14 | Ajouter `rel="preload"` sur la police principale |
+
+### 🟡 Semaine 2-4
+| # | Tâche |
+|---|---|
+| 15 | Ajouter photos équipe/bureau sur a-propos.html (E-E-A-T) |
+| 16 | Ajouter skip link accessibilité |
+| 17 | Ajouter @media print dans styles.css |
+| 18 | Vérifier Core Web Vitals sur PageSpeed Insights |
+| 19 | Inscrire le site sur les annuaires automobiles (backlinks) |
+| 20 | Ajouter schema CollectionPage sur blog/index.html |
+| 21 | Minifier CSS et JS |
+| 22 | Soumettre à Bing Webmaster Tools |

@@ -14,6 +14,39 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# ---- Redirection www → non-www ----
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# ---- URLs propres — supprimer l'extension .html ----
+# Redirige /contact.html → /contact (301 permanent)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# ---- Réécriture transparente — servir les fichiers depuis pages/ ----
+# /contact → sert pages/contact.html (sans changer l'URL visible)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/%{REQUEST_URI}.html -f [NC]
+RewriteRule ^(.+)$ /pages/$1.html [L]
+
+# ---- Réécriture transparente — servir les articles blog depuis pages/blog/ ----
+# /blog/guide-homologation-vasp → sert pages/blog/guide-homologation-vasp.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/blog/%1.html -f [NC]
+RewriteRule ^blog/(.+)$ /pages/blog/$1.html [L]
+
+# ---- Réécriture transparente — index du blog ----
+# /blog → sert pages/blog/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/?$ /pages/blog/index.html [L]
+
+# ---- Supprimer le slash final (sauf dossiers réels) ----
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
 # ---- En-têtes de sécurité HTTP ----
 <IfModule mod_headers.c>
 

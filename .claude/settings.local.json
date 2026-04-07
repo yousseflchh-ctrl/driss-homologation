@@ -21,7 +21,17 @@
       "Read(//c/Users/youssef.lechhebmhaou/.claude/plugins//**)",
       "Bash(grep -l \"og:\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)",
       "Bash(grep -l \"schema.org\\\\|ld+json\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)",
-      "Bash(grep -i \"nofollow\\\\|noindex\\\\|noarchive\\\\|nocache\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)"
-    ]
+      "Bash(grep -i \"nofollow\\\\|noindex\\\\|noarchive\\\\|nocache\" \"/c/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\"/*.html)",
+      "Bash(python3 -)",
+      "Skill(update-config)",
+      "Bash(grep -h 'rel=\"canonical\"' pages/*.html)",
+      "Bash(grep -h 'rel=\"canonical\"' pages/blog/*.html)",
+      "Bash(git -C \"c:/Users/youssef.lechhebmhaou/OneDrive - Financiere Acteon/Bureau/Website/Driss\" status --short)",
+      "Bash(powershell -Command \"Set-Location 'c:\\\\Users\\\\youssef.lechhebmhaou\\\\OneDrive - Financiere Acteon\\\\Bureau\\\\Website\\\\Driss'; git status --short\")",
+      "Bash(cmd /c \"cd /d \\\\\"c:\\\\Users\\\\youssef.lechhebmhaou\\\\OneDrive - Financiere Acteon\\\\Bureau\\\\Website\\\\Driss\\\\\" && git status --short\")",
+      "Bash(cmd /c cd /d \"c:\\\\Users\\\\youssef.lechhebmhaou\\\\OneDrive - Financiere Acteon\\\\Bureau\\\\Website\\\\Driss\")",
+      "Bash(git add:*)"
+    ],
+    "defaultMode": "bypassPermissions"
   }
 }
